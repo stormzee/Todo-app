@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+</head>
+<body>
+    <p>TODO list app</p>
+    <div>
+    {% for todo in todos  %} 
+       <a href="{% url 'detail' todo.id %}"a> {{ todo.title }}<br>
+        <p>Status ==>{{ todo.finished }}</p>
+    {% endfor %}
+    </div>
+    <div>
+        <form action="." method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Add task</button>
+        </form>
+    </div>
+    
+</body>
+</html>
