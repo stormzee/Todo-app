@@ -3,10 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Detail</title>
+    <title>Update</title>
 </head>
 <body>
-    {{ todo.description }}
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Submit</button>
+
+    </form>
+
     
 </body>
 </html>

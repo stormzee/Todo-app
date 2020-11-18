@@ -9,8 +9,9 @@
     <p>TODO list app</p>
     <div>
     {% for todo in todos  %} 
-       <a href="{% url 'detail' todo.id %}"a> {{ todo.title }}<br>
-        <p>Status ==>{{ todo.finished }}</p>
+       <p>{{todo.title}}</p><br>
+       <a href="{% url 'delete' todo.id %}"> Delete </a>
+       <a href="{% url 'update' todo.id %}">Update</a>
     {% endfor %}
     </div>
     <div>
